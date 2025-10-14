@@ -36,6 +36,53 @@
                     <input type="range" id="inp-range" min="0" max="15">
                 </div>
 
+                <div class="checkbox-container">
+
+                    <div>
+                        <input type="checkbox" id="inp-uppercase">
+                        <label for="inp-uppercase">Include Uppercase Letters</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="inp-lowercase">
+                        <label for="inp-lowercase">Include Lowercase Letters</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="inp-numbers">
+                        <label for="inp-numbers">Include Numbers</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="inp-symbol">
+                        <label for="inp-symbol">Include Symbols</label>
+                    </div>
+
+                </div>
+
+                <div class="password-strength--container">
+                    <p>
+                        strength
+                    </p>
+
+                    <!-- don't like class name, should think up a better one little later -->
+                    <div class="strength-indicator">
+                        <p>medium</p>
+
+                        <!--smae here-->
+                        <div class="squers">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button>
+                    generate <img src="./assets/images/icon-arrow-right.svg" alt="icon-arrow-right">
+                </button>
+
             </section>
 
         </form>
