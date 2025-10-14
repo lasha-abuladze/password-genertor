@@ -1,0 +1,105 @@
+
+
+$background-color--primary: #18171F;
+$background-color--secondary: #24232C;
+
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+body {
+    font-family: "JetBrains Mono", monospace;
+    background-color: $background-color--primary;
+    padding: 64px 16px 0px 16px;
+    box-sizing: border-box;
+    color: #FFF;
+    text-align: center;
+}
+
+
+.generator-form {
+    margin-top: 16px;
+    max-width: 540px;
+
+
+    .generated-password--container {
+        padding: 17px 16px;
+        box-sizing: border-box;
+        @include flex-row();
+        justify-content: space-between;
+        background-color: $background-color--secondary;
+
+        .generated-password {
+            font-size: 24px;
+            font-weight: 700;
+            
+        }
+        
+        .icon-copy {
+            cursor: pointer;
+        }
+    }
+
+    .section-inputs {
+        margin-top: 16px;
+        background-color: $background-color--secondary;
+        padding: 21px 16px 16px 16px;
+        box-sizing: border-box;
+
+        .range-container {
+            label {
+                width: 100%;
+                @include flex-row();
+                justify-content: space-between;
+            }
+
+            #inp-range {
+                width: 100%;
+                margin-top: 18px;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+// .generator-form {
+//     max-width: 540px;   
+//     text-align: center;
+//     position: relative;
+
+//     fieldset {
+//         background-color: $background-color--secondary;
+//     }
+
+//     legend {
+//         position: absolute;
+//         top: -16px;
+//         left: 50%;
+//         transform: translate(-50%, -100%);
+//     }
+
+//     .generated-password--div {
+//         @include flex-row();
+//     }
+// }
+
