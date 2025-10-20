@@ -107,14 +107,74 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
   z-index: 1;
-  display: none;
+  transition: all 0.2s;
+  visibility: hidden;
 }
 .generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox:checked::after {
   border: 2px solid #A4FFAF;
   background-color: #A4FFAF;
 }
 .generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox:checked::before {
-  display: block;
+  visibility: visible;
+}
+.generator-form .section-inputs .password-strength--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  background-color: #18171F;
+  height: 56px;
+  padding: 0dvh 16px;
+  box-sizing: border-box;
+}
+.generator-form .section-inputs .password-strength--container p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #817D92;
+}
+.generator-form .section-inputs .password-strength--container .strength-indicator p {
+  font-size: 18px;
+  color: #E6E5EA;
+  text-transform: uppercase;
+}
+.generator-form .section-inputs .password-strength--container .strength-indicator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.generator-form .section-inputs .password-strength--container .strength-indicator .squers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.generator-form .section-inputs .password-strength--container .strength-indicator .squers div {
+  width: 10px;
+  height: 28px;
+  border: 2px solid #E6E5EA;
+  box-sizing: border-box;
+}
+.generator-form .section-inputs .password-strength--container .yellow-squer {
+  background-color: #F8CD65;
+  border: none !important;
+}
+.generator-form .section-inputs .submit-btn {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #A4FFAF;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
