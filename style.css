@@ -3,8 +3,14 @@ body {
   background-color: #18171F;
   padding: 64px 16px 0px 16px;
   box-sizing: border-box;
-  color: #FFF;
+  color: #E6E5EA;
   text-align: center;
+}
+
+h1 {
+  color: #817D92;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .generator-form {
@@ -19,6 +25,8 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #24232C;
+  font-size: 24px;
+  font-weight: 700;
 }
 .generator-form .generated-password--container .generated-password {
   font-size: 24px;
@@ -39,10 +47,74 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+}
+.generator-form .section-inputs .range-container label .character-number {
+  font-size: 24px;
+  color: #A4FFAF;
 }
 .generator-form .section-inputs .range-container #inp-range {
   width: 100%;
-  margin-top: 18px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.generator-form .section-inputs .checkbox-list {
+  text-align: left;
+  margin-bottom: 32px;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container {
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container label {
+  font-size: 16px;
+  font-weight: 700;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container:last-child {
+  margin: 0px;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  appearance: none;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid #E6E5EA;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 100 !important;
+  transition: all 0.1s;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 5px;
+  border-left: 3px solid #18171F;
+  border-bottom: 3px solid #18171F;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 1;
+  display: none;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox:checked::after {
+  border: 2px solid #A4FFAF;
+  background-color: #A4FFAF;
+}
+.generator-form .section-inputs .checkbox-list .checkbox-container .inp-checkbox:checked::before {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,6 +4,11 @@ $background-color--primary: #18171F;
 $background-color--secondary: #24232C;
 
 
+$color--primary: #E6E5EA;
+$color--secondary: #817D92;
+$color--neon-green: #A4FFAF;
+
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;
@@ -23,10 +28,16 @@ body {
     background-color: $background-color--primary;
     padding: 64px 16px 0px 16px;
     box-sizing: border-box;
-    color: #FFF;
+    color: $color--primary;
     text-align: center;
 }
 
+
+h1 {
+    color: $color--secondary;
+    font-size: 16px;
+    font-weight: 700;
+}
 
 .generator-form {
     margin-top: 16px;
@@ -39,6 +50,8 @@ body {
         @include flex-row();
         justify-content: space-between;
         background-color: $background-color--secondary;
+        font-size: 24px;
+        font-weight: 700;
 
         .generated-password {
             font-size: 24px;
@@ -58,15 +71,91 @@ body {
         box-sizing: border-box;
 
         .range-container {
+
             label {
                 width: 100%;
                 @include flex-row();
                 justify-content: space-between;
+                font-size: 16px;
+                font-weight: 700;
+
+                .character-number {
+                    font-size: 24px;
+                    color: $color--neon-green;
+                }
             }
 
             #inp-range {
                 width: 100%;
-                margin-top: 18px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .checkbox-list {
+            text-align: left;
+            margin-bottom: 32px;
+
+            .checkbox-container {
+                margin-bottom: 17px;
+                @include flex-row();
+                gap: 20px;
+
+                label {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                &:last-child {
+                    margin: 0px;
+                }
+
+                .inp-checkbox {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    appearance: none;
+                }
+
+                .inp-checkbox::after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    box-sizing: border-box;
+                    border: 2px solid $color--primary;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    opacity: 100 !important;
+                    // background-color: $color--primary;
+                    transition: all 0.1s;
+                }
+                
+                .inp-checkbox::before {
+                    content: "";
+                    display: block;
+                    width: 9px;
+                    height: 5px;
+                    border-left: 3px solid $background-color--primary;
+                    border-bottom: 3px solid $background-color--primary;
+
+                    position: absolute;
+                    top: 45%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    z-index: 1;
+
+                    display: none;
+                }
+
+                .inp-checkbox:checked::after {
+                    border: 2px solid $color--neon-green;
+                    background-color: $color--neon-green;
+                }
+
+                .inp-checkbox:checked::before {
+                    display: block;
+                }
             }
         }
 
