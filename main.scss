@@ -84,16 +84,57 @@ h1 {
                     font-size: 24px;
                     color: $color--neon-green;
                 }
+                margin-bottom: 32px;
             }
 
             #inp-range {
                 width: 100%;
-                margin-top: 32px;
-                margin-bottom: 32px;
+                // margin-top: 32px;
+                // margin-bottom: 32px;
+                -webkit-appearance: none;
+                appearance: none;
+                background: transparent;
+                // position: relative;
+             
             }
+
+            // Chrome/Safari/Edge  
+
+            #inp-range::-webkit-slider-runnable-track {
+                height: 8px;
+                border-radius: 5px;
+                background-color: $background-color--primary;
+                z-index: 5;
+            }
+            
+
+            #inp-range::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 30px;
+                height: 30px;
+                background-color: $color--primary;
+                border-radius: 50%;
+                margin-top: calc((8px - 30px) / 2);
+            }
+
+            // .range-inp-container {
+            //     position: relative;
+            // }
+
+            // .progress-line {
+            //     width: 100%;
+            //     height: 8px;
+            //     background-color: red;
+            //     position: absolute;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     z-index: 0;
+            // }
         }
 
         .checkbox-list {
+            margin-top: 32px;
             text-align: left;
             margin-bottom: 32px;
 
