@@ -66,8 +66,6 @@ h1 {
 .generator-form .section-inputs .range-container #inp-range::-webkit-slider-runnable-track {
   height: 8px;
   border-radius: 5px;
-  background-color: #18171F;
-  z-index: 5;
 }
 .generator-form .section-inputs .range-container #inp-range::-webkit-slider-thumb {
   -webkit-appearance: none;
